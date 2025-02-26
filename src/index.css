@@ -66,15 +66,14 @@ body{
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      gap: 10px;
+      gap: 5px;
     }
       /* botão de aviso */
       .botao__exercicio--aviso{
-        height: 50px;
-        width: 300px;
+        height: 40px;
+        width: 350px;
         border: solid 1px;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-radius: 40px;
         background-color: darkred;
         color: #fff;
         font-size: 15px;
@@ -82,28 +81,29 @@ body{
         cursor: pointer;
       }
         .botao__exercicio--aviso:hover{
-          height: 60px;
-          width: 320px;
+          height: 45px;
+          width: 370px;
           border: none;
           border-radius: 40px;
           font-size: 20px;
           font-weight: bolder;
           transform: 5ms;
+          margin-left: 180px;
+          transition: 1s;
         }
     /* botões de opções */
       .botao__exercicio{
-        height: 50px;
-        width: 300px;
+        height: 40px;
+        width: 350px;
         border: solid 1px;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-radius: 40px;
         cursor: pointer;
         font-size: 15px;
         font-weight: bold;
       }
       .botao__exercicio:hover{
-        height: 60px;
-        width: 320px;
+        height: 45px;
+        width: 370px;
         border: none;
         border-radius: 40px;
         font-size: 20px;
@@ -111,6 +111,8 @@ body{
         transform: 5ms;
         background-color: #265024;
         color: #fff;
+        margin-left: 180px;
+        transition: 1s;
       }
 
   /* Exercicios */
@@ -150,7 +152,6 @@ body{
     /* Pages - Temperatura */
     .container__temperatura{
       display: flex;
-      /* justify-content: center; */
       align-items: center;
       flex-direction: column;
       width: 100%;
@@ -190,7 +191,6 @@ body{
           align-items: center;
           height: 15%;
           width: 100%;
-          /* background-color: #fff; */
         }
           .temperatura__input{
             padding-left: 10px;
@@ -204,7 +204,6 @@ body{
           align-items: center;
           height: 15%;
           width: 100%;
-          /* background-color: #928787; */
         }
           .temperatura__entrada{
             display: flex;
@@ -271,3 +270,61 @@ body{
             font-size: 40px;
             font-weight: bolder;
           }
+
+    /* Pages - Distância */
+    .container__distancia{
+      
+    }
+    
+    /* Pages - IMC */
+    .container__imc{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /* margin-top: 20px; */
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+    }
+      .imc__header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 30%;
+        width: 90% ;
+        background-color: darkcyan;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+        border-radius: 50px;
+      }
+        .gif__imc{
+          height: 150px;
+          width: 300px;
+        }
+        .imc__dados{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          height: 15%;
+          width: 100%;
+          background-color: darkgray;
+        }
+          .imc__entrada--dados{
+            height: 40px;
+            width: 250px;
+            padding-left: 10px;
+          }
+        .imc__calcular{
+          height: 40px;
+          width: 200px;
+          border-radius: 20px;
+        }
+        .imc__resultado{
+          display: flex;
+          height: 55%;
+          width: 100%;
+          background-color: darkkhaki;
+        }
