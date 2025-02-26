@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-
 function Temperatura() {
+
     const [temperaturaDigitada, setTemperaturaDigitada] = useState();
     const [temperaturaEntrada, setTemperaturaEntrada] = useState();
     const [temperaturaSaida, setTemperaturaSaida] = useState();
@@ -11,17 +11,52 @@ function Temperatura() {
        
         let calculo
 
-        //converter de celsius para os outros
-        if (temperaturaEntrada === 'celsius' && temperaturaSaida === 'kelvin'){
+        if (temperaturaEntrada === temperaturaSaida){
 
-            calculo = (parseFloat(temperaturaDigitada) + 273.15)
-            setResultadoCalculo(calculo)
-            
-        }else if(temperaturaEntrada === 'celsius' && temperaturaSaida === 'farenheit'){
-            
-            calculo = ((parseFloat(temperaturaDigitada) *  9 /5)) + 32
-            setResultadoCalculo(calculo)
+            setResultadoCalculo(`Erro🌡`)
+
+        }else{
+
+            //converter de celsius para os outros
+            if (temperaturaEntrada === 'celsius' && temperaturaSaida === 'kelvin'){
     
+                calculo = (parseFloat(temperaturaDigitada) + 273.15).toFixed(1)
+                setResultadoCalculo(`${calculo} °K`)
+                
+            }
+            else if(temperaturaEntrada === 'celsius' && temperaturaSaida === 'fahrenheit'){
+                
+                calculo = (((parseFloat(temperaturaDigitada) *  9 /5)) + 32).toFixed(1)
+                setResultadoCalculo(`${calculo} °F`)
+                
+            }
+            
+            //converter de farenheit para os outros
+            if(temperaturaEntrada === 'fahrenheit' && temperaturaSaida === 'celsius'){
+                
+                calculo = ((parseFloat(temperaturaDigitada) - 32) * 5/9).toFixed(1)
+                setResultadoCalculo(`${calculo} °C`)
+                
+            }else if(temperaturaEntrada === 'fahrenheit' && temperaturaSaida === 'kelvin'){
+                
+                calculo = ((parseFloat(temperaturaDigitada) - 32) * 5/9 + 273.15).toFixed(1)
+                setResultadoCalculo(`${calculo} °K`)
+                
+            }
+            
+            //converter de kelvin para os outros
+            if(temperaturaEntrada === 'kelvin' && temperaturaSaida === 'celsius'){
+                
+                calculo = (parseFloat(temperaturaDigitada) - 273.15).toFixed(1)
+                setResultadoCalculo(`${calculo} °C`)
+                
+            }else if(temperaturaEntrada === 'kelvin' && temperaturaSaida === 'fahrenheit'){
+                
+                calculo = ((parseFloat(temperaturaDigitada) - 273.15) * 9/5 + 32).toFixed(1)
+                setResultadoCalculo(`${calculo} °F`) 
+    
+            }
+
         }
 
     }
@@ -62,7 +97,7 @@ function Temperatura() {
                         className="temperatura__select">
                         <option value="">Selecione uma opção de entrada</option>
                         <option value="celsius">Celsius</option>
-                        <option value="farenheit">Farenheit</option>
+                        <option value="fahrenheit">Fahrenheit</option>
                         <option value="kelvin">Kelvin</option>
 
                     </select>
@@ -81,7 +116,7 @@ function Temperatura() {
                         className="temperatura__select">
                         <option value="">Selecione uma opção de saída</option>
                         <option value="celsius">Celsius</option>
-                        <option value="farenheit">Farenheit</option>
+                        <option value="fahrenheit">Fahrenheit</option>
                         <option value="kelvin">Kelvin</option>
 
                     </select>
@@ -98,7 +133,12 @@ function Temperatura() {
 
             <div className="temperatura__resultado">
 
-                {resultadoCalculo}
+                <div className="temperatura__resultado--quadro">
+
+                    {resultadoCalculo}
+
+                </div>
+
                 
             </div>
 

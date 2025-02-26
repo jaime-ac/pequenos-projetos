@@ -70,40 +70,40 @@ body{
     }
       /* botão de aviso */
       .botao__exercicio--aviso{
-        height: 60px;
+        height: 50px;
         width: 300px;
         border: solid 1px;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
         background-color: darkred;
         color: #fff;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
         cursor: pointer;
       }
         .botao__exercicio--aviso:hover{
-          height: 80px;
-          width: 330px;
+          height: 60px;
+          width: 320px;
           border: none;
           border-radius: 40px;
-          font-size: 25px;
+          font-size: 20px;
           font-weight: bolder;
           transform: 5ms;
         }
     /* botões de opções */
       .botao__exercicio{
-        height: 60px;
+        height: 50px;
         width: 300px;
         border: solid 1px;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: bold;
       }
       .botao__exercicio:hover{
-        height: 80px;
-        width: 330px;
+        height: 60px;
+        width: 320px;
         border: none;
         border-radius: 40px;
         font-size: 20px;
@@ -129,19 +129,19 @@ body{
       align-items: center;
       flex-direction: column;
       padding: 15px;
-      height: 700px;
-      width: 800px;
+      height: 500px;
+      width: 600px;
       border-radius: 20px;
       background-color: #000;
       box-shadow: inset 0 0 8px 5px #47b343;
-      gap: 40px;
+      gap: 20px;
     }
       .imagem__aviso{
-        height: 400px;
-        width: 400px;
+        height: 300px;
+        width: 300px;
       }
       .texto__aviso{
-        font-size: 15px;
+        font-size: 13px;
         font-family: inherit;
         font-weight: bolder;
       }
@@ -155,6 +155,7 @@ body{
       flex-direction: column;
       width: 100%;
       height: 100%;
+      gap: 20px;
     }
       /* Descrição da atividade */
       .temperatura__descricao{
@@ -180,6 +181,7 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        gap: 20px;
       }
 
         .temperatura__digitada{
@@ -191,9 +193,10 @@ body{
           /* background-color: #fff; */
         }
           .temperatura__input{
-            padding-left: 5px;
+            padding-left: 10px;
             height: 40px;
             width: 300px;
+            border-radius: 35px;
           }
         .temperatura__opcoes{
           display: flex;
@@ -201,14 +204,14 @@ body{
           align-items: center;
           height: 15%;
           width: 100%;
-          background-color: #928787;
+          /* background-color: #928787; */
         }
           .temperatura__entrada{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 10px;
+            gap: 5px;
           }
 
           .temperatura__saida{
@@ -216,12 +219,15 @@ body{
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 10px;
+            gap: 5px;
           }
 
           .temperatura__select{
             width: 300px;
             height: 40px;
+            border-radius: 35px;
+            padding: 10px;
+            cursor: pointer;
           }
 
           .temperatura__calculo{
@@ -232,8 +238,18 @@ body{
             .botao__calculo{
               height: 40px;
               width: 150px;
-              margin-top: 30px;
+              margin-top: 20px;
+              border-radius: 35px;
+              cursor: pointer;
+              font-size: 14px;
+              font-weight: bold;
             }
+              .botao__calculo:hover{
+                background-color: #47b343;
+                color: #fff;
+                font-size: 18px;
+                font-weight: bolder;
+              }
 
         .temperatura__resultado{
           display: flex;
@@ -241,5 +257,17 @@ body{
           align-items: center;
           height: 70%;
           width: 100%;
-          background-color: #000;
+          background-color: transparent;
         }
+          .temperatura__resultado--quadro{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            background-color: transparent;
+            box-shadow: inset 0 0 8px 5px #f2f5f2;
+            border-radius: 50%;
+            font-size: 40px;
+            font-weight: bolder;
+          }

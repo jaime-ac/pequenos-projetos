@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Aviso from "../pages/Aviso"
 import Temperatura from "../pages/Temperatura";
+import Moedas from "../pages/Moedas";
 
 function Main() {
     const [tela, setTela] = useState();
@@ -17,7 +18,8 @@ function Main() {
             <div className="topicos__opcoes">
 
                 <button className="botao__exercicio--aviso" onClick={() => setTela(<Aviso />)}>O grande avisador⚠️</button>
-                <button className="botao__exercicio" onClick={() => setTela(<Temperatura />)}>Conversor de temperatura</button>
+                <button className="botao__exercicio" onClick={() => setTela(<Temperatura />)}>Conversor de temperatura🌡</button>
+                <button className="botao__exercicio" onClick={() => setTela(<Moedas />)}>Conversor de moedas💱</button>
                 
             </div>
 
