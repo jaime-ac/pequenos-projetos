@@ -87,7 +87,7 @@ function Temperatura() {
 
                 <div className="temperatura__entrada">
 
-                    <label htmlFor="entrada">Entrada</label>
+                    {/* <label htmlFor="entrada" className="label__select" >Entrada</label> */}
 
                     <select 
 
@@ -106,7 +106,7 @@ function Temperatura() {
 
                 <div className="temperatura__saida">
 
-                    <label htmlFor="saida">Saída</label>
+                    {/* <label htmlFor="saida" className="label__select">Saída</label> */}
 
                     <select 
 

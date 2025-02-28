@@ -88,7 +88,7 @@ body{
           font-size: 20px;
           font-weight: bolder;
           transform: 5ms;
-          margin-left: 180px;
+          margin-left: 90px;
           transition: 1s;
         }
     /* botões de opções */
@@ -111,7 +111,7 @@ body{
         transform: 5ms;
         background-color: #265024;
         color: #fff;
-        margin-left: 180px;
+        margin-left: 90px;
         transition: 1s;
       }
 
@@ -157,6 +157,9 @@ body{
       width: 100%;
       height: 100%;
       gap: 20px;
+      background-image: url(/public/backgrounds/temperatura.avif);
+      background-repeat: no-repeat;
+      background-size: cover;
     }
       /* Descrição da atividade */
       .temperatura__descricao{
@@ -167,8 +170,8 @@ body{
         align-items: center;
         flex-direction: column;
         gap: 10px;
-        background-color: rgb(6, 27, 6);
-        box-shadow: inset 0 0 8px 5px #47b343;
+        background-color: rgb(17, 161, 205);
+        box-shadow: inset 0 0 8px 5px #1692bc;
         border-radius: 25px;
         font-size: 20px;
         font-weight: bolder;
@@ -197,6 +200,8 @@ body{
             height: 40px;
             width: 300px;
             border-radius: 35px;
+            font-size: 15px;
+            font-weight: bold;
           }
         .temperatura__opcoes{
           display: flex;
@@ -205,6 +210,12 @@ body{
           height: 15%;
           width: 100%;
         }
+          .label__select{
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+
+          }
           .temperatura__entrada{
             display: flex;
             justify-content: center;
@@ -227,6 +238,8 @@ body{
             border-radius: 35px;
             padding: 10px;
             cursor: pointer;
+            font-size: 15px;
+            font-weight: bolder;
           }
 
           .temperatura__calculo{
@@ -237,7 +250,6 @@ body{
             .botao__calculo{
               height: 40px;
               width: 150px;
-              margin-top: 20px;
               border-radius: 35px;
               cursor: pointer;
               font-size: 14px;
@@ -265,10 +277,11 @@ body{
             height: 200px;
             width: 200px;
             background-color: transparent;
-            box-shadow: inset 0 0 8px 5px #f2f5f2;
+            box-shadow: inset 0 0 8px 10px #f48004;
             border-radius: 50%;
             font-size: 40px;
             font-weight: bolder;
+            color: #000;
           }
 
     /* Pages - Distância */
@@ -285,14 +298,16 @@ body{
       /* margin-top: 20px; */
       width: 100%;
       height: 100%;
-      background-color: #000;
+      background-image: url('/public/background.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     .imc__header{
       display: flex;
       justify-content: center;
       align-items: center;
       height: 30%;
-        width: 100% ;
+      width: 100% ;
     }
       .header__elements{
         display: flex;
@@ -302,29 +317,30 @@ body{
         background-color: darkcyan;
         height: 90%;
         width: 80%;
-        gap: 10px;
-        font-size: 20px;
+        gap: 5px;
+        font-size: 15px;
         font-weight: bolder;
         border-radius: 50px;
         box-shadow: inset 0 0 8px 5px #f2f5f2;
       }
         .gif__imc{
-          height: 150px;
-          width: 300px;
+          height: 100px;
+          width: 200px;
         }
         .imc__dados{
           display: flex;
           justify-content: space-around;
           align-items: center;
-          height: 15%;
+          height: 10%;
           width: 100%;
-          background-color: darkgray;
+          background-color: transparent;
         }
           .imc__entrada--dados{
             height: 40px;
-            width: 320px;
+            width: 280px;
             padding-left: 10px;
             border-radius: 10px;
+            border: none;
           }
         .imc__calcular{
           height: 40px;
@@ -334,18 +350,20 @@ body{
           font-size: 20px;
           font-weight: bold;
           cursor: pointer;
+          border: none;
         }
           .imc__calcular:hover{
             transition: 0.5s;
             height: 45px;
             width: 230px;
             font-weight: bolder;
+            
           }
         .imc__resultado{
           display: flex;
-          height: 55%;
+          height: 60%;
           width: 100%;
-          background-color: darkkhaki;
+          background-color: transparent;
         }
           .imagem__resultado{
             display: flex;
@@ -353,13 +371,45 @@ body{
             align-items: center;
             height: 100%;
             width: 50%;
-            background-color: #265024;
+            background-color: transparent;
+            gap: 20px;
+            padding: 20px;
           }
+            .header__resultado--imagem{
+              height: 360px;
+              width: 220px;
+              border-radius: 20px;
+              border: none;
+              box-shadow: inset 0 0 8px 5px #f2f5f2;
+            }
           .texto__resultado{
-            background-color: #47b343;
+            background-color: transparent;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100%;
             width: 50%;
+            font-size: 50px;
+            font-weight: bolder;
+            gap: 20px;
+            /* text-shadow: 0px 10px 8px 5px #000; */
           }
+            .card__resultado{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 200px;
+              width: 300px;
+              background-color: darkcyan;
+              border-radius: 30px;
+              box-shadow: 0 0 8px 5px #f2f5f2;
+              font-size: 40px;
+              color: white;
+              text-shadow: 0 0 5px blue, 0 0 10px cyan, 0 0 15px lightblue;
+            }
+
+            .imc__text--result{
+              color: white;
+              text-shadow: 0 0 5px blue, 0 0 10px cyan, 0 0 15px lightblue;
+            }

@@ -1,21 +1,49 @@
 import { useState } from "react"
 
 
-function Imc({imagem, result}) {
+function Imc() {
 
     const [peso, setPeso] = useState();
     const [altura, setAltura] = useState();
+    const [imagemMasc, setImagemMasc] = useState();
+    const [imagemFem, setImagemFem] = useState();
+    const [result, setResult] = useState('aguardando...');
 
     function calcularImc(){
 
-        if (parseFloat(peso) === '' || parseFloat(altura) === ''){
+        if (!peso || !altura){ //a ! faz a verificação para ver se um dos campos está retornando '', null, NaN, undefined;
 
-            alert("Atenção você precisa preencher todos os campos antes de prosseguri com o cálculo!")
+            alert("Atenção você precisa preencher todos os campos antes de prosseguir com o cálculo!")
 
         }else{
 
-            const imc = (peso / (altura * altura)).toFixed(1)
-            alert(imc)
+            const imc = (parseFloat(peso) / (parseFloat(altura) * parseFloat(altura))).toFixed(1)
+            
+            if (imc < 18.5){
+
+                setImagemMasc('/imc/abaixo-peso-masc.png')
+                setImagemFem('/imc/abaixo-peso-fem.png')
+                setResult(imc)
+
+            }else if (imc >= 18.5 && imc < 25){
+                
+                setImagemMasc('/imc/normal-masc.png')
+                setImagemFem('/imc/normal-fem.png')
+                setResult(imc)
+
+            }else if (imc >= 25 && imc < 30){
+                
+                setImagemMasc('/imc/acima-peso-masc.png')
+                setImagemFem('/imc/acima-peso-fem.png')
+                setResult(imc)
+
+            }else{
+                
+                setImagemMasc('/imc/obesidade-masc.png')
+                setImagemFem('/imc/obesidade-fem.png')
+                setResult(imc)
+
+            }
         }
     }
 
@@ -42,7 +70,7 @@ function Imc({imagem, result}) {
                 value={peso}
                 onChange={(event) => setPeso(event.target.value)}
                 className="imc__entrada--dados"
-                placeholder="digite o seu peso aqui em kilos (ex.: 74 ou 74.50)" 
+                placeholder="digite o seu peso em kilos (ex.: 74.00)" 
             />
 
             <input 
@@ -50,7 +78,7 @@ function Imc({imagem, result}) {
                 value={altura}
                 onChange={(event) => setAltura(event.target.value)}
                 className="imc__entrada--dados"
-                placeholder="digite a sua altura aqui em metros (ex.: 1.80)"
+                placeholder="digite a sua altura em metros (ex.: 1.80)"
             />
             
             <button className="imc__calcular" onClick={calcularImc}>Calcular</button>
@@ -61,13 +89,20 @@ function Imc({imagem, result}) {
 
             <div className="imagem__resultado">
 
-                <img src={imagem} alt="" className="header__resultado--imagem"/>
+                <img src={imagemMasc} alt="" className="header__resultado--imagem"/>
+                <img src={imagemFem} alt="" className="header__resultado--imagem"/>
 
             </div>
 
             <div className="texto__resultado">
 
-                {result}
+                <label htmlFor="" className="imc__text--result">IMC</label>
+
+                <div className="card__resultado">
+
+                    {result}
+
+                </div>
 
             </div>
 
