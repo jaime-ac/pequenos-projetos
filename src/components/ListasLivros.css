@@ -1,0 +1,128 @@
+.container__listas{
+    height: 95%;
+    width: 95%;
+    background-color: #F4E2B4;
+    border-radius: 20px;
+}
+
+.listas__header{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+}
+    .botao__criar--listas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 60px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+        .img__criar--listas{
+            height: 50px;
+            width: 50px;
+        }
+
+.listas__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+    background-color: transparent;
+}
+    .listas__body--card__listas{
+        height: 95%;
+        width: 98%;
+        background-color: #FCF6E8;
+        border-radius: 20px;
+    }
+    
+    dialog{
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        height: 400px;
+        background-color: transparent;
+        border: none;
+        border-radius: 20px;
+        width: 40%;
+        position: fixed;
+        top: 65%;
+        left: 51%;
+        transform: translate(-10%, -50%);
+    }
+        .form__listas{
+            height: 90%;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-left: 8px;
+            padding-right: 8px;
+            gap: 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: #F4E2B4;
+        }
+
+            .form__nome--lista{
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                height: 20%;
+                width: 100%;
+                gap: 5px;
+                margin-top: 20px;
+            }
+                .form__inputs{
+                    height: 40px;
+                    width: 500px;
+                    padding-left: 5px;
+                }
+
+            .form__descricao--lista{
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                height: 60%;
+                width: 100%;
+                gap: 5px;
+            }
+                .form__campo--descricao{
+                    height: 150px;
+                    width: 500px;
+                    padding-left: 5px;
+                    padding-top: 5px;
+                }
+
+            .form__botao--salvar{
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                flex-direction: column;
+                height: 20%;
+                width: 100%;
+                padding-right: 45px;
+            }
+                .salvar__listas{
+                    height: 30px;
+                    width: 150px;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+                }
+            
+
+
+        
+

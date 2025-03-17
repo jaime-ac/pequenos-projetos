@@ -4,6 +4,7 @@ import Temperatura from "../pages/Temperatura";
 import Moedas from "../pages/Moedas";
 import Distancia from "../pages/Distancia";
 import Imc from "../pages/Imc";
+import Biblioteca from "../pages/Biblioteca";
 
 function Main() {
     const [tela, setTela] = useState();
@@ -24,6 +25,7 @@ function Main() {
                 <button className="botao__exercicio" onClick={() => setTela(<Moedas />)}>Conversor de moedas💱</button>
                 <button className="botao__exercicio" onClick={() => setTela(<Distancia />)}>Conversor de distância🛣️</button>
                 <button className="botao__exercicio" onClick={() => setTela(<Imc />)}>Calculador de IMC⚖️</button>
+                <button className="botao__exercicio" onClick={() => setTela(<Biblioteca />)}>Flipi</button>
                 
             </div>
 
