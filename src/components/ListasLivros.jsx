@@ -1,29 +1,30 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import './ListasLivros.css'
+import CardLista from './CardLista';
+import MinhaLista from './MinhaLista';
 
 function ListasLivros() {
 
     const [abriuForm, setAbriuForm] = useState(false);
     const [nomeLista, setNomeLista] = useState('');
     const [descricaoLista, setDescricaoLista] = useState('');
-    const [listas, setListas] = useState([{
-        nome: '',
-        descricao: ''
-    }])
-
-    const ref = useRef();
+    const [listas, setListas] = useState([]);
+    const [mostrarLista, setMostrarLista] = useState(false);
 
     function salvarLista(){
-        setAbriuForm(false)
-    }
 
-    // useEffect(() => {
-    //     if(abriuForm){
-    //         ref.current?.showModal();
-    //     }else{
-    //         ref.current?.close();
-    //     }
-    // }, [abriuForm]);
+        if (nomeLista.trim() && descricaoLista.trim()) {
+            setListas(prevListas => {
+                const novasListas = [...prevListas, { nomeLista, descricaoLista }];
+                setNomeLista(""); // Limpa o input
+                setDescricaoLista(""); // Limpa o input
+                setAbriuForm(false); // Fecha o diálogo APÓS atualizar a lista
+                console.log(novasListas)
+                return novasListas;
+            });
+        }
+
+    }
 
   return (
     <div className='container__listas'>
@@ -39,7 +40,17 @@ function ListasLivros() {
 
         <div className="listas__body">
 
-            <div className="listas__body--card__listas">
+            {mostrarLista && <MinhaLista />}
+
+            <div onClick={() => setMostrarLista(true)} className="listas__body--card__listas">
+
+                {listas.length > 0 ? (
+                        listas.map((lista, index) => (
+                            <CardLista key={index} titulo={lista.nomeLista} />
+                        ))
+                    ) : (
+                        <p>Nenhuma lista criada ainda.</p>
+                    )}
 
             </div>
 

@@ -1,0 +1,32 @@
+.container__card--listas{
+    height: 270px;
+    width: 180px;
+    background-color: #c85b34;
+    border-radius: 10px;
+}
+
+    .img__card--listas{
+        height: 80%;
+        width: 100%;
+        background-color: whitesmoke;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+        .image__capa--listas{
+            height: 220px;
+            width: inherit;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border: none;
+        }
+
+    .title__card--listas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+        width: 100%;
+        background-color: darkcyan;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
