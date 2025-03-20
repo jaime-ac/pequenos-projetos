@@ -1,5 +1,7 @@
 .container__lista--livros{
     height: 95%;
     width: 98%;
-    background-color: darkcyan;
+    background-color: #FCF6E8;
+    margin-top: 20px;
+    border-radius: 20px;
 }

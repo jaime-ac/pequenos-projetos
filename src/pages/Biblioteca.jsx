@@ -1,11 +1,11 @@
 import ListasLivros from '../components/ListasLivros'
 import './Biblioteca.css'
 
-function Biblioteca() {
+function Biblioteca({ componente }) {
   return (
     <div className='container__biblioteca'>
 
-        <ListasLivros />
+        {componente}
       
     </div>
   )

@@ -3,6 +3,8 @@
     width: 180px;
     background-color: #c85b34;
     border-radius: 10px;
+    cursor: pointer;
+    border: solid 1px #40454b;
 }
 
     .img__card--listas{

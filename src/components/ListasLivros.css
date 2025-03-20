@@ -1,4 +1,8 @@
 .container__listas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 95%;
     width: 95%;
     background-color: #F4E2B4;
@@ -48,6 +52,7 @@
         border-radius: 20px;
         gap: 20px;
         flex-wrap: wrap;
+        color: #40454b;
     }
     
     dialog{

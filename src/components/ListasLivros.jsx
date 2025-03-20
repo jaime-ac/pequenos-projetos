@@ -29,10 +29,11 @@ function ListasLivros() {
   return (
     <div className='container__listas'>
 
+        {mostrarLista && <MinhaLista />}
+
         <div className="listas__header">
 
             <button className="botao__criar--listas" onClick={() => setAbriuForm(true)}>
-                {console.log(abriuForm)}
                 <img src="./flipi/criar-listas.svg" alt="" className='img__criar--listas'/>
             </button>
 
@@ -40,18 +41,20 @@ function ListasLivros() {
 
         <div className="listas__body">
 
-            {mostrarLista && <MinhaLista />}
-
-            <div onClick={() => setMostrarLista(true)} className="listas__body--card__listas">
+            <div className="listas__body--card__listas">
 
                 {listas.length > 0 ? (
                         listas.map((lista, index) => (
-                            <CardLista key={index} titulo={lista.nomeLista} />
+
+                            <div className="card__lista" onClick={() => setMostrarLista(true)}>
+                                <CardLista key={index} titulo={lista.nomeLista} />
+                            </div>
                         ))
                     ) : (
-                        <p>Nenhuma lista criada ainda.</p>
-                    )}
-
+                            <p>Nenhuma lista criada ainda.</p>
+                    )
+                }
+ 
             </div>
 
         </div>
