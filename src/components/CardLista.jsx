@@ -6,7 +6,7 @@ function CardLista({ titulo }) {
 
         <div className="img__card--listas">
 
-            <img src="./flipi/capa.webp" alt="" className='image__capa--listas'/>
+            {/* <img src="./flipi/capa.webp" alt="" className='image__capa--listas'/> */}
 
         </div>
 

@@ -10,14 +10,18 @@
 }
 
 .listas__header{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    height: 15%;
+    height: 10%;
     width: 100%;
-    background-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
     padding: 10px;
 }
+    .botao__header{
+        position: relative;
+        display: inline-block;
+    }
     .botao__criar--listas{
         display: flex;
         justify-content: center;
@@ -33,11 +37,35 @@
             width: 50px;
         }
 
+        .texto__botao--header{
+            font-size: 20px;
+            font-weight: bolder;
+            width: 150px;
+            visibility: hidden;
+            background-color: #c85b34;
+            color: #40454b;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 6px;
+
+            position: absolute;
+            z-index: 1;
+            bottom: 22%; /* Posição acima do botão */
+            left: -140%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 3s;
+        }
+            .botao__header:hover .texto__botao--header{
+                visibility: visible;
+                opacity: 2;
+            }
+
 .listas__body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85%;
+    height: 90%;
     width: 100%;
     background-color: transparent;
 }
@@ -46,7 +74,7 @@
         justify-content: start;
         align-items: start;
         padding: 15px;
-        height: 95%;
+        height: 98%;
         width: 98%;
         background-color: #FCF6E8;
         border-radius: 20px;
@@ -142,7 +170,3 @@
                         font-weight: bolder;
                     }
             
-
-
-        
-

@@ -33,9 +33,14 @@ function ListasLivros() {
 
         <div className="listas__header">
 
-            <button className="botao__criar--listas" onClick={() => setAbriuForm(true)}>
-                <img src="./flipi/criar-listas.svg" alt="" className='img__criar--listas'/>
-            </button>
+            <div className="botao__header">
+
+                <button className="botao__criar--listas" onClick={() => setAbriuForm(true)}>
+                    <img src="./flipi/criar-listas.svg" alt="Criar lista" className='img__criar--listas'/>
+                    <span className='texto__botao--header'>Criar Lista</span>
+                </button>
+
+            </div>
 
         </div>
 

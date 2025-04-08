@@ -1,6 +1,6 @@
 .container__card--listas{
-    height: 270px;
-    width: 180px;
+    height: 290px;
+    width: 220px;
     background-color: #c85b34;
     border-radius: 10px;
     cursor: pointer;
@@ -8,25 +8,25 @@
 }
 
     .img__card--listas{
-        height: 80%;
+        height: 70%;
         width: 100%;
         background-color: whitesmoke;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
-        .image__capa--listas{
-            height: 220px;
+        /* .image__capa--listas{
+            height: inherit;
             width: inherit;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             border: none;
-        }
+        } */
 
     .title__card--listas{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 20%;
+        height: 30%;
         width: 100%;
         background-color: darkcyan;
         border-bottom-left-radius: 10px;
