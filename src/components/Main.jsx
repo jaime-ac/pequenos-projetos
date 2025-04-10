@@ -6,6 +6,7 @@ import Distancia from "../pages/Distancia";
 import Imc from "../pages/Imc";
 import Biblioteca from "../pages/Biblioteca";
 import ListasLivros from "./ListasLivros";
+import MinhaLista from "./MinhaLista";
 
 function Main() {
     const [tela, setTela] = useState();
@@ -27,7 +28,8 @@ function Main() {
                 <button className="botao__exercicio" onClick={() => setTela(<Distancia />)}>Conversor de distância🛣️</button>
                 <button className="botao__exercicio" onClick={() => setTela(<Imc />)}>Calculador de IMC⚖️</button>
 
-                <button className="botao__exercicio" onClick={() => setTela(<Biblioteca componente={<ListasLivros />}/>)}>Flipi</button>
+                {/* <button className="botao__exercicio" onClick={() => setTela(<Biblioteca componente={<ListasLivros />}/>)}>Flipi</button> */}
+                <button className="botao__exercicio" onClick={() => setTela(<Biblioteca componente={<MinhaLista />}/>)}>Flipi</button>
                 
             </div>
 
